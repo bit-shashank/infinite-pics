@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	border: 0px;
+	font-family: "Montserrat", sans-serif;
+}
+
+.container {
+	background: #0d0d0d;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.form-container {
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.button {
+	background-color: #f23322;
+	border: none;
+	color: #ffffff;
+	text-align: center;
+	font-size: 24px;
+	padding: 20px;
+	width: 200px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button span:after {
+	content: "\00bb";
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button:hover span {
+	padding-right: 25px;
+}
+
+.button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.form-container input {
+	background: #2d3833;
+	font-family: "Poppins", sans-serif;
+	color: white;
+	width: 400px;
+	height: 68px;
+	font-size: 32px;
+	display: inline;
+	padding: 1em;
+}
+
+.form-container input:focus {
+	outline: none;
+}
+
+.hidden {
+	display: none;
+}
+
+.image-container {
+	width: 85%;
+
+}
+
+.row {
+	display: -ms-flexbox; /* IE10 */
+	display: flex;
+	-ms-flex-wrap: wrap; /* IE10 */
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+	-ms-flex: 25%; /* IE10 */
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+}
+
+.column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+	.column {
+		-ms-flex: 50%;
+		flex: 50%;
+		max-width: 50%;
+	}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+	.column {
+		-ms-flex: 100%;
+		flex: 100%;
+		max-width: 100%;
+	}
+    .form-container{
+        flex-direction: column;
+    }
+    .form-container input{
+        width: 80%;
+        display: block;
+    }
+}
