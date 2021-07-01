@@ -12,7 +12,7 @@ function explore() {
 }
 
 async function scrapImages() {
-	let url="http://localhost:3000/images/"+keyword;
+	let url="https://serverimg.herokuapp.com/images/"+keyword;
 	let res=await fetch(encodeURI(url),{
 		method: 'GET',
 		headers: {
